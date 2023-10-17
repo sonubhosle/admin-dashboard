@@ -1,0 +1,315 @@
+.overview-section {
+    width: 100%;
+    height: auto;
+    margin: 20px 0px;
+    column-gap: 10px;
+    align-content: normal;
+    justify-content: space-between;
+}
+
+.overview {
+    width: 900px;
+    height: auto;
+    background-color: var(--bg-white);
+    padding: 20px;
+    border-radius: 5px;
+    align-items: normal;
+    box-shadow: rgba(0, 0, 0, 0.019) 0px 0px 35px 0px;
+
+}
+
+.overview-heading {
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-dark);
+    align-items: normal;
+}
+
+.sub-title {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-top: 1px;
+
+}
+
+.select-box {
+    background-color: var(--bg-body);
+    padding: 0px 30px 0px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    height: 30px;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-box i {
+    position: absolute;
+    right: 5px;
+    font-size: 22px;
+}
+
+.overview .bars {
+    margin-top: 10px;
+    height: auto;
+    height: auto;
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+.bars .bar-line {
+    background-color: var(--bg-lavender);
+    width: 2.8vw;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.bars .bar-1 {
+    height: 120px;
+}
+
+.bars .bar-2 {
+    height: 70px;
+}
+
+.bars .bar-3 {
+    height: 200px;
+}
+
+.bars .bar-4 {
+    height: 155px;
+}
+
+.bars .bar-5 {
+    height: 180px;
+}
+
+.bars .bar-6 {
+    height: 60px;
+}
+
+.bars .bar-7 {
+    height: 180px;
+}
+
+.bars .bar-8 {
+    height: 200px;
+    background-color: var(--bg-zaffer);
+}
+
+.bars .bar-9 {
+    height: 190px;
+}
+
+.bars .bar-10 {
+    height: 160px;
+}
+
+.bars .bar-11 {
+    height: 150px;
+}
+
+.bars .bar-12 {
+    height: 170px;
+}
+
+.bars .bar .bar-text {
+    width: 35px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Customers Section Css */
+
+.customer {
+    width: 300px;
+    height: auto;
+    background-color: var(--bg-white);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.019) 0px 0px 35px 0px;
+
+}
+
+.customer-box {
+    width: 100%;
+    height: auto;
+    margin: 5px 0px;
+    justify-content: center;
+    position: relative;
+    padding: 19px 0px;
+}
+
+.circle {
+    background-color: var(--bg-white);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 15px 0px;
+    position: relative;
+
+}
+
+.circle-mini {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 15px solid var(--bg-lavender);
+    height: 130px;
+    width: 130px;
+}
+
+.progress {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    color: #fff;
+    top: 13%;
+    left: 12%;
+    background: rgb(221, 0, 110);
+    background: linear-gradient(to right, transparent 50%, rgb(231, 4, 117) 0%, rgba(240, 67, 159, 1) 100%);
+}
+
+.progress h3 {
+    position: absolute;
+    left: 52%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    z-index: 1;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.progress .total {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-weight: 500;
+    font-size: 10px;
+    line-height:12px;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.progress::before {
+    content: '';
+    display: block;
+    height: 100%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+}
+
+.progress::after {
+    content: '';
+    position: absolute;
+    inset: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.progress::before {
+    background: #491bef;
+    background: linear-gradient(250deg, rgb(73, 27, 239) 46%, rgba(179, 126, 237, 1) 100%);
+    transform: rotate(calc(((65 - 50) * 0.01turn)));
+}
+
+
+
+/* MEDIA QUERY FOR OVERVIEW */
+
+@media (max-width:992px) {
+    .overview-section {
+        display: block;
+    }
+
+    .overview {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .bars .bar-line {
+        width: 35px;
+    }
+    .customer {
+        width: 100%;
+        justify-content: center;
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+    
+    }
+    
+    .circle-mini {
+        height: 160px;
+        width: 160px;
+    }
+    
+    .progress {
+        width: 170px;
+        height: 170px;
+        top: 15%;
+        left: 15%;
+ 
+    }
+    .progress .total{
+        font-size: 14px;
+        line-height:15px;
+    }
+    
+}
+
+@media (max-width:768px) {
+    .overview .bars {
+        margin-top: 10px;
+        height: auto;
+        height: auto;
+        display: flex;
+        align-items: last baseline;
+        justify-content: space-between;
+        scroll-behavior: smooth;
+        overflow: auto;
+        column-gap: 20px;
+    }
+
+    .overview .bars::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+
+@media(max-width:350px){
+    .circle {
+        width: 200px;
+        height: 200px;
+    
+    }
+    
+    .circle-mini {
+        height: 130px;
+        width: 130px;
+    }
+    
+    .progress {
+        width: 140px;
+        height: 140px;
+        top: 13%;
+        left: 12%;
+    }
+    .progress .total{
+        font-size: 10px;
+        line-height:15px;
+    }
+}

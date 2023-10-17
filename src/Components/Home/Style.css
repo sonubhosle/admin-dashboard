@@ -1,0 +1,133 @@
+.home-section {
+  position: relative;
+  height: 100vh;
+  top: 0;
+  left: 250px;
+  width: calc(100% - 250px);
+  transition: all .5s ease;
+  z-index: 2;
+  padding: 20px 20px;
+}
+
+.sidebar.open~.home-section {
+  left: 78px;
+  width: calc(100% - 78px);
+}
+
+.home-section .heading {
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 400;
+}
+
+.home-section .heading .right-search {
+  position: relative;
+}
+
+.right-search input {
+  width: 100%;
+  height: 33px;
+  background-color: var(--bg-white);
+  border-radius: 4px;
+  outline: none;
+  border: 0;
+  padding-left: 35px;
+  box-shadow: rgba(0, 0, 0, 0.049) 0px 0px 20px 0px;
+}
+
+.right-search .bx-search {
+  position: absolute;
+  left: 10px;
+  color: var(--text-dark);
+  font-size: 20px;
+}
+
+/* MEDIA QUERY HOME */
+
+@media (max-width:992px) {
+  .home-section {
+    left: 250px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .sidebar.open~.home-section {
+    left: 0px;
+    width: 100%;
+  }
+
+  .home-section .heading {
+    color: var(--text-dark);
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    font-weight: 400;
+    padding: 0px 2% 0px 0%;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 5555;
+    background-color: var(--bg-white);
+    box-shadow: rgba(0, 0, 0, 0.198) 0px 0px 15px 0px;
+  }
+
+  .right-search input {
+    background-color: var(--bg-body);
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .home-items {
+    padding: 20px 20px;
+  }
+
+}
+
+@media (max-width:991px) {
+
+  .home-section {
+    position: relative;
+    height: 100vh;
+    top: 0;
+    left: 0px;
+    width: 100%;
+  }
+
+  .sidebar.close~.home-section {
+    left: 0px;
+    width: 100%;
+  }
+
+  .home-section .heading {
+    padding: 0px 10px 0px 50px;
+    position: fixed;
+  }
+
+  .home-items {
+    padding: 20px 15px;
+  }
+
+}
+
+@media(max-width:576px) {
+  .home-section .heading {
+    height: 80px;
+    display: block;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+  }
+
+  .home-section .heading p {
+    padding-top: 4px;
+    padding-left: 30px;
+  }
+
+  .right-search {
+    padding-top: 6px;
+  }
+}
